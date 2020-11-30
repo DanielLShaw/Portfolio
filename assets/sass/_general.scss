@@ -1,0 +1,12 @@
+$primary-color: #410041;
+$secondary-color: #8f008f;
+
+$primary-background: #888;
+
+a {
+  color: $primary-color;
+  font-weight: bold;
+  &:hover {
+    color: $secondary-color;
+  }
+}

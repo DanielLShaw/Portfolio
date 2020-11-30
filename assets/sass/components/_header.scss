@@ -1,5 +1,50 @@
 header {
+  $logo_height: 60px;
   padding: 1rem;
-  background-color: lightgray;
-  min-height: 100px;
+  background-color: $primary-background;
+
+  .header-nav {
+    &__logo img {
+      height: $logo_height;
+    }
+    &.desktop {
+      align-items: center;
+
+      .header-nav {
+        &__page-links {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        &__link {
+          padding: 1rem;
+        }
+      }
+    }
+
+    &.mobile {
+      display: flex;
+      position: relative;
+      .header-nav {
+        &__toggle {
+          position: absolute;
+          right: 0;
+        }
+
+        &__popout {
+          display: none;
+          &.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: $primary-background;
+            width: 100%;
+            top: $logo_height;
+            left: 0;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
 }

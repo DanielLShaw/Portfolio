@@ -1,6 +1,13 @@
 footer {
-  padding: 1rem;
+  padding: 0.5rem;
+  background-color: $primary-background;
+  text-align: center;
+  border-bottom: $primary-color 3px solid;
 
-  background-color: lightgray;
-  min-height: 100px;
+  .footer {
+    &__link {
+      padding: 0.25rem;
+      vertical-align: middle;
+    }
+  }
 }

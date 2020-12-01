@@ -1,2 +1,6 @@
-@import '~foundation-sites/scss/foundation';
+@import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+
+.grid-container {
+  min-width: 1024px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import SPALink from "../SPALink";
 
 import { TiThMenu, TiThMenuOutline } from "react-icons/ti";
 
@@ -21,34 +22,34 @@ const Nav = () => {
 
   const menuLinks = [
     { link: "/about", text: "About" },
-    { link: "/experiments", text: "Experiments" },
+    { link: "/aoc", text: "Advent of Code" },
   ];
 
   return (
     <>
       <NotMobile>
         <div className="header-nav desktop grid-x">
-          <a href="/" className="header-nav__logo cell medium-3">
+          <SPALink href="/" className="header-nav__logo cell medium-3">
             <img src={logo} alt="logo" />
-          </a>
+          </SPALink>
           <nav className="header-nav__page-links cell medium-9">
             {menuLinks.map(({ link, text }) => (
-              <a
+              <SPALink
                 key={`${link}-${text}`}
                 href={link}
                 className="header-nav__link"
               >
                 {text}
-              </a>
+              </SPALink>
             ))}
           </nav>
         </div>
       </NotMobile>
       <Mobile>
         <div className="header-nav mobile">
-          <a href="/" className="header-nav__logo ">
+          <SPALink href="/" className="header-nav__logo ">
             <img src={logo} alt="logo" />
-          </a>
+          </SPALink>
           <button className="header-nav__toggle" onClick={handleClick}>
             {navOpen ? (
               <TiThMenu size="60px" />
@@ -58,13 +59,13 @@ const Nav = () => {
           </button>
           <nav className={mobileClass}>
             {menuLinks.map(({ link, text }) => (
-              <a
+              <SPALink
                 key={`${link}-${text}`}
                 href={link}
                 className="header-nav__link"
               >
                 {text}
-              </a>
+              </SPALink>
             ))}
           </nav>
         </div>

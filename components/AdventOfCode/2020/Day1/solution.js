@@ -1,14 +1,10 @@
-import data from "./input";
-
 // https://adventofcode.com/2020/day/1
 
-export const part1 = () => {
-  console.time("Part 1");
-  const { expenses } = data;
+export const part1 = (expenseList = []) => {
   let firstExpense;
   let secondExpense;
-  expenses?.some((a) => {
-    return expenses.some((b) => {
+  expenseList?.some((a) => {
+    return expenseList.some((b) => {
       if (a + b === 2020) {
         firstExpense = a;
         secondExpense = b;
@@ -16,22 +12,19 @@ export const part1 = () => {
       }
     });
   });
-  console.timeEnd("Part 1");
   return {
     firstExpense,
     secondExpense,
   };
 };
 
-export const part2 = () => {
-  console.time("Part 2");
-  const { expenses } = data;
+export const part2 = (expenseList = []) => {
   let firstExpense;
   let secondExpense;
   let thirdExpense;
-  expenses?.some((a) => {
-    return expenses.some((b) => {
-      return expenses.some((c) => {
+  expenseList?.some((a) => {
+    return expenseList.some((b) => {
+      return expenseList.some((c) => {
         if (a + b + c === 2020) {
           firstExpense = a;
           secondExpense = b;
@@ -41,7 +34,6 @@ export const part2 = () => {
       });
     });
   });
-  console.timeEnd("Part 2");
 
   return {
     firstExpense,

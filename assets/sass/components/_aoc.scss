@@ -7,4 +7,18 @@
     font-size: 110%;
     font-weight: bold;
   }
+
+  &.day {
+    &-3 {
+      fieldset.slopes {
+        .slope {
+          max-width: 70%;
+          margin: 0 auto;
+          label {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }

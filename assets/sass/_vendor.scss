@@ -2,5 +2,6 @@
 @include foundation-everything;
 
 .grid-container {
-  min-width: 1024px;
+  width: 100%;
+  max-width: 1024px;
 }

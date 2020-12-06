@@ -16,6 +16,10 @@ import {
   Day4Part1,
   Day4Part2,
 } from "../../../components/AdventOfCode/2020/Day4";
+import {
+  Day5Part1,
+  Day5Part2,
+} from "../../../components/AdventOfCode/2020/Day5";
 
 const AoC2020 = () => {
   const aocLink = "https://adventofcode.com/2020";
@@ -43,6 +47,12 @@ const AoC2020 = () => {
         aocLink={aocLink}
         Part1={Day4Part1}
         Part2={Day4Part2}
+      />
+      <AoCContainer
+        day={5}
+        aocLink={aocLink}
+        Part1={Day5Part1}
+        Part2={Day5Part2}
       />
     </Layout>
   );

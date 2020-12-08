@@ -3,6 +3,8 @@ import AoCContainer from "../../../components/AdventOfCode/AoCContainer";
 import Layout from "../../../components/Layout";
 import SPALink from "../../../components/SPALink";
 
+import summary2020 from "../../../components/AdventOfCode/2020/summary2020.md";
+
 import {
   Day1Part1,
   Day1Part2,
@@ -29,15 +31,18 @@ import {
   Day7Part1,
   Day7Part2,
 } from "../../../components/AdventOfCode/2020/Day7";
+import {
+  Day8Part1,
+  Day8Part2,
+} from "../../../components/AdventOfCode/2020/Day8";
+import ReactMarkdown from "react-markdown";
 
 const AoC2020 = () => {
   const aocLink = "https://adventofcode.com/2020";
 
   return (
     <Layout>
-      <h1>
-        <SPALink href={aocLink}>Advent of Code 2020</SPALink>
-      </h1>
+      <ReactMarkdown>{summary2020}</ReactMarkdown>
       <AoCContainer
         day={1}
         aocLink={aocLink}
@@ -74,6 +79,12 @@ const AoC2020 = () => {
         aocLink={aocLink}
         Part1={Day7Part1}
         Part2={Day7Part2}
+      />
+      <AoCContainer
+        day={8}
+        aocLink={aocLink}
+        Part1={Day8Part1}
+        Part2={Day8Part2}
       />
     </Layout>
   );

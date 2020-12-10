@@ -34,3 +34,7 @@ This was the first that took me 2 days to solve (admittedly I wasn't feeling gre
 ### Day 8
 
 This was a fun task. Knowing how to dodge infinite loops would have been useful intel for Day 7, but Day 8 drills it home. Probably not the most performant answer for part 2, as it loops from top to bottom for all possible inputs synchronously. I'd make this solution better by introducing Promises to it some how to speed it up.
+
+### Day 9 - Encoding Error
+
+Lots of loops and array slicing in this one. Overall not too tricky.

@@ -35,6 +35,11 @@ import {
   Day8Part1,
   Day8Part2,
 } from "../../../components/AdventOfCode/2020/Day8";
+
+import {
+  Day9Part1,
+  Day9Part2,
+} from "../../../components/AdventOfCode/2020/Day9";
 import ReactMarkdown from "react-markdown";
 
 const AoC2020 = () => {
@@ -85,6 +90,12 @@ const AoC2020 = () => {
         aocLink={aocLink}
         Part1={Day8Part1}
         Part2={Day8Part2}
+      />
+      <AoCContainer
+        day={9}
+        aocLink={aocLink}
+        Part1={Day9Part1}
+        Part2={Day9Part2}
       />
     </Layout>
   );

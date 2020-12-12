@@ -20,5 +20,25 @@
         }
       }
     }
+    &-11 {
+      .seating-system {
+        width: unset;
+        &__seat {
+          padding: 0;
+          margin: 0;
+          height: 5px;
+          width: 5px;
+          &.available {
+            background-color: lightgray;
+          }
+          &.occupied {
+            background-color: green;
+          }
+          &.floor {
+            background-color: darkgrey;
+          }
+        }
+      }
+    }
   }
 }

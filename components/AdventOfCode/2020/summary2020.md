@@ -45,6 +45,10 @@ Part one wasnt too bad, but Part 2 required knowledge of Big-O notation and trib
 
 Because I don't really understand the maths, I might return to solve Day 10 part 2 later.
 
+### Day 13 -
+
+Another case of part 1 not being too bad, but part 2 requiring prior knowledge of a maths theorem... After searching for help on r/adventofcode I found that JS doesn't handle very large numbers, and that I would have to research `BigInt`, but alas, I don't have time today to do it.
+
 ### Day 14 - Docking Data
 
 Part 2 made me learn how updating large `Object`s is really slow! Enter `Map`. By simply using a `Map` it cut my execution time from minutes to milliseconds!

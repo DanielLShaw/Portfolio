@@ -23,16 +23,18 @@ export const part1 = (rawInput) => {
   return busId * wait;
 };
 
+// need to revisit, JS doesnt handle the huge numbers required for this question
+// BigInt is the way to go when I have time.
 export const findNiceBusDeparturePattern = (buses) => {
   let findingAnswer = true;
-  let firstBusId = parseInt(buses.shift());
+  let firstBusId = BigInt(buses.shift());
   let timestamp = firstBusId;
 
-  while (findingAnswer) {
+  while (findingAnswer && timestamp < 1000n) {
     const answer = buses.every((busId, index) => {
       let busDeparts = true;
       if (busId !== "x") {
-        busDeparts = (timestamp + index + 1) % parseInt(busId) === 0;
+        busDeparts = (timestamp + BigInt(index + 1)) % BigInt(busId) === 0;
       }
       return busDeparts;
     });

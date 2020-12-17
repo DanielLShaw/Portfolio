@@ -124,12 +124,7 @@ const AoC2020 = () => {
         Part1={Day12Part1}
         Part2={Day12Part2}
       />
-      <AoCContainer
-        day={13}
-        aocLink={aocLink}
-        Part1={Day13Part1}
-        Part2={Day13Part2}
-      />
+      <AoCContainer day={13} aocLink={aocLink} Part1={Day13Part1} />
     </Layout>
   );
 };

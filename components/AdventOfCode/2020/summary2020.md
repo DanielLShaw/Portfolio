@@ -52,3 +52,7 @@ Another case of part 1 not being too bad, but part 2 requiring prior knowledge o
 ### Day 14 - Docking Data
 
 Part 2 made me learn how updating large `Object`s is really slow! Enter `Map`. By simply using a `Map` it cut my execution time from minutes to milliseconds!
+
+### Day 15 - Rambunctious Recitation
+
+This day was made a whole lot easier and quicker using `Map`! I was pleased to see that my part 1 answer scaled into part 2 with some very minor tweaks.

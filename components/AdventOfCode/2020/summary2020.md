@@ -56,3 +56,7 @@ Part 2 made me learn how updating large `Object`s is really slow! Enter `Map`. B
 ### Day 15 - Rambunctious Recitation
 
 This day was made a whole lot easier and quicker using `Map`! I was pleased to see that my part 1 answer scaled into part 2 with some very minor tweaks.
+
+### Day 16 - Ticket Translation
+
+Once again `Maps` were here to save the day. Day 16 built upon the knowledge I'd gained from Days 14 and 15, but there were a whole lot more `Map` manipulations and sudoku logic!

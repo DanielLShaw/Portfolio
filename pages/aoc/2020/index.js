@@ -51,10 +51,7 @@ import {
   Day12Part1,
   Day12Part2,
 } from "../../../components/AdventOfCode/2020/Day12";
-import {
-  Day13Part1,
-  Day13Part2,
-} from "../../../components/AdventOfCode/2020/Day13";
+import { Day13Part1 } from "../../../components/AdventOfCode/2020/Day13";
 import {
   Day14Part1,
   Day14Part2,
@@ -67,6 +64,7 @@ import {
   Day16Part1,
   Day16Part2,
 } from "../../../components/AdventOfCode/2020/Day16";
+import { Day17 } from "../../../components/AdventOfCode/2020/Day17";
 
 const AoC2020 = () => {
   const aocLink = "https://adventofcode.com/2020";
@@ -156,6 +154,7 @@ const AoC2020 = () => {
         Part1={Day16Part1}
         Part2={Day16Part2}
       />
+      <AoCContainer day={17} aocLink={aocLink} Part1={Day17} />
     </Layout>
   );
 };

@@ -40,5 +40,12 @@
         }
       }
     }
+    &-17 {
+      .canvas {
+        &__container {
+          height: 400px;
+        }
+      }
+    }
   }
 }

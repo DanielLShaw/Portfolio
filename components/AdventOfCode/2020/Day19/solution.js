@@ -56,5 +56,5 @@ export const part1 = (rawInput) => {
     regex.test(message.trim())
   );
 
-  return validMessages.length;
+  return validMessages;
 };

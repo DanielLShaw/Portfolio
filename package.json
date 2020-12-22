@@ -13,6 +13,12 @@
       "pre-push": "npm test"
     }
   },
+  "jest": {
+    "transform": {
+      "\\.js$": "babel-jest",
+      "\\.(html|xml|txt)$": "jest-raw-loader"
+    }
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "classnames": "^2.2.6",
@@ -43,6 +49,7 @@
     "file-loader": "^6.2.0",
     "husky": "^4.3.0",
     "jest": "^26.6.3",
+    "jest-raw-loader": "^1.0.1",
     "raw-loader": "^4.0.2",
     "redux-devtools": "^3.7.0",
     "redux-devtools-extension": "^2.13.8"

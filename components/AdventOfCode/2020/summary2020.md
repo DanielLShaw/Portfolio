@@ -60,3 +60,13 @@ This day was made a whole lot easier and quicker using `Map`! I was pleased to s
 ### Day 16 - Ticket Translation
 
 Once again `Maps` were here to save the day. Day 16 built upon the knowledge I'd gained from Days 14 and 15, but there were a whole lot more `Map` manipulations and sudoku logic!
+
+## Day 19
+
+I struggled with wrapping my head around the data in this one. I got the data into a map but then didn't know where to go from there. Resorting to checking other peoples answers on the sub reddit, I saw a common solution was to generate a RegExp from the map I had already successfully created.
+
+After recieving that hint, I managed to scrap together an odd looking RegExp, but it worked!
+
+```
+^(a)(((a)(a)|(b)(b))((a)(b)|(b)(a))|((a)(b)|(b)(a))((a)(a)|(b)(b)))(b)$
+```

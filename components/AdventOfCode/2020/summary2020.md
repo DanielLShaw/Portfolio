@@ -70,3 +70,7 @@ After recieving that hint, I managed to scrap together an odd looking RegExp, bu
 ```
 ^(a)(((a)(a)|(b)(b))((a)(b)|(b)(a))|((a)(b)|(b)(a))((a)(a)|(b)(b)))(b)$
 ```
+
+## Day 21
+
+Another puzzle where I struggled to see where to start, so once again getting a hint from Reddit I was on my way and steamed through parts 1 and 2.

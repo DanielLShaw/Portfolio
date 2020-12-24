@@ -74,3 +74,7 @@ After recieving that hint, I managed to scrap together an odd looking RegExp, bu
 ## Day 21
 
 Another puzzle where I struggled to see where to start, so once again getting a hint from Reddit I was on my way and steamed through parts 1 and 2.
+
+## Day 22
+
+Pretty fun recursion puzzle. Shame for part 2 I was driving myself up the wall trying to find out why my infinity protection wasn't firing. Turns out I'd mixed up a `>=` with a `<=`...

@@ -10,6 +10,7 @@ import {
   Day1Part1,
   Day1Part2,
 } from "../../../components/AdventOfCode/2020/Day1";
+import Day1ReadMe from "../../../components/AdventOfCode/2020/Day1/readme.md";
 import {
   Day2Part1,
   Day2Part2,
@@ -77,108 +78,49 @@ import {
 } from "../../../components/AdventOfCode/2020/Day22";
 
 const AoC2020 = () => {
-  const aocLink = "https://adventofcode.com/2020";
+  const days = [
+    { day: 1, parts: [Day1Part1, Day1Part2], stars: 2, markdown: Day1ReadMe },
+    { day: 2, parts: [Day2Part1, Day2Part2], stars: 2 },
+    { day: 3, parts: [Day3], stars: 2 },
+    { day: 4, parts: [Day4Part1, Day4Part2], stars: 2 },
+    { day: 5, parts: [Day5Part1, Day5Part2], stars: 2 },
+    { day: 6, parts: [Day6Part1, Day6Part2], stars: 2 },
+    { day: 7, parts: [Day7Part1, Day7Part2], stars: 2 },
+    { day: 8, parts: [Day8Part1, Day8Part2], stars: 2 },
+    { day: 9, parts: [Day9Part1, Day9Part2], stars: 2 },
+    { day: 10, parts: [Day10Part1], stars: 1 },
+    { day: 11, parts: [Day11Part1, Day11Part2], stars: 2 },
+    { day: 12, parts: [Day12Part1, Day12Part2], stars: 2 },
+    { day: 13, parts: [Day13Part1], stars: 1 },
+    { day: 14, parts: [Day14Part1, Day14Part2], stars: 2 },
+    { day: 15, parts: [Day15Part1, Day15Part2], stars: 2 },
+    { day: 16, parts: [Day16Part1, Day16Part2], stars: 2 },
+    { day: 17, parts: [Day17], stars: 2 },
+    { day: 18 },
+    { day: 19, parts: [Day19Part1], stars: 1 },
+    { day: 20, parts: [Day20Part1], stars: 1 },
+    { day: 21, parts: [Day21Part1, Day21Part2], stars: 2 },
+    { day: 22, parts: [Day22Part1, Day22Part2], stars: 2 },
+    { day: 23 },
+    { day: 24 },
+    { day: 25 },
+  ];
 
   return (
     <Layout>
-      <ReactMarkdown>{summary2020}</ReactMarkdown>
-      <AoCContainer
-        day={1}
-        aocLink={aocLink}
-        Part1={Day1Part1}
-        Part2={Day1Part2}
-      />
-      <AoCContainer
-        day={2}
-        aocLink={aocLink}
-        Part1={Day2Part1}
-        Part2={Day2Part2}
-      />
-      <AoCContainer day={3} aocLink={aocLink} Part1={Day3} />
-      <AoCContainer
-        day={4}
-        aocLink={aocLink}
-        Part1={Day4Part1}
-        Part2={Day4Part2}
-      />
-      <AoCContainer
-        day={5}
-        aocLink={aocLink}
-        Part1={Day5Part1}
-        Part2={Day5Part2}
-      />
-      <AoCContainer
-        day={6}
-        aocLink={aocLink}
-        Part1={Day6Part1}
-        Part2={Day6Part2}
-      />
-      <AoCContainer
-        day={7}
-        aocLink={aocLink}
-        Part1={Day7Part1}
-        Part2={Day7Part2}
-      />
-      <AoCContainer
-        day={8}
-        aocLink={aocLink}
-        Part1={Day8Part1}
-        Part2={Day8Part2}
-      />
-      <AoCContainer
-        day={9}
-        aocLink={aocLink}
-        Part1={Day9Part1}
-        Part2={Day9Part2}
-      />
-      <AoCContainer day={10} aocLink={aocLink} Part1={Day10Part1} />
-      <AoCContainer
-        day={11}
-        aocLink={aocLink}
-        Part1={Day11Part1}
-        Part2={Day11Part2}
-      />
-      <AoCContainer
-        day={12}
-        aocLink={aocLink}
-        Part1={Day12Part1}
-        Part2={Day12Part2}
-      />
-      <AoCContainer day={13} aocLink={aocLink} Part1={Day13Part1} />
-
-      <AoCContainer
-        day={14}
-        aocLink={aocLink}
-        Part1={Day14Part1}
-        Part2={Day14Part2}
-      />
-      <AoCContainer
-        day={15}
-        aocLink={aocLink}
-        Part1={Day15Part1}
-        Part2={Day15Part2}
-      />
-      <AoCContainer
-        day={16}
-        aocLink={aocLink}
-        Part1={Day16Part1}
-        Part2={Day16Part2}
-      />
-      <AoCContainer day={17} aocLink={aocLink} Part1={Day17} />
-      <AoCContainer day={19} aocLink={aocLink} Part1={Day19Part1} />
-      <AoCContainer day={20} aocLink={aocLink} Part1={Day20Part1} />
-      <AoCContainer
-        day={21}
-        aocLink={aocLink}
-        Part1={Day21Part1}
-        Part2={Day21Part2}
-      />
-      <AoCContainer
-        day={22}
-        aocLink={aocLink}
-        Part1={Day22Part1}
-        Part2={Day22Part2}
-      />
+      <h1>Advent of Code - 2020</h1>
+      <div className="grid-x">
+        {days.map(({ day, parts, markdown, stars }) => (
+          <AoCContainer
+            className="cell small-4 medium-3 large-2"
+            key={day}
+            parts={parts}
+            day={day}
+            markdown={markdown}
+            stars={stars}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };

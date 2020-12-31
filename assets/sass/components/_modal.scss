@@ -1,0 +1,45 @@
+.modal-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background: rgb(0.1, 0.1, 0.1, 0.4);
+
+  .modal-wrap {
+    max-width: 1200px;
+    min-height: 300px;
+    max-height: 90%;
+    width: 80%;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+      width: 95%;
+    }
+
+    .modal-close {
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      margin: 0;
+      padding: 0.2em 0;
+      background-color: lightgray;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    .modal-scroll-container {
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    .modal-contents {
+      padding: 1em;
+      overflow: auto;
+    }
+  }
+}

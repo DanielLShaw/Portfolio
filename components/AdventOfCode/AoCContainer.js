@@ -1,38 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import SPALink from "../SPALink";
+import CONSTANTS from "../../lib/constants";
+import Modal from "../Modal";
+import ReactMarkdown from "react-markdown";
 
-const AoCContainer = ({ day, aocLink, Part1, Part2 }) => {
-  const questionLink = `${aocLink}/day/${day}`;
+const propTypes = {
+  className: PropTypes.string,
+  day: PropTypes.number.isRequired,
+  parts: PropTypes.arrayOf(PropTypes.element),
+  markdown: PropTypes.string,
+  stars: PropTypes.number,
+};
 
-  const containerClasses = classNames(["aoc-container", `day-${day}`]);
+const defaultProps = {
+  className: null,
+  markdown: null,
+  parts: [],
+  stars: 0,
+};
 
-  const solutionClasses = classNames({
-    "aoc-container__solution": true,
-    cell: true,
-    "medium-6": Part1 && Part2,
-  });
+const AoCContainer = ({ day, parts, stars, markdown, className }) => {
+  const [showModal, setShowModal] = useState(false);
+  const questionLink = `${CONSTANTS.aocLink}/day/${day}`;
+
+  const containerClasses = classNames([
+    "aoc-container",
+    `day-${day}`,
+    className,
+    `stars-${stars}`,
+  ]);
+
+  const modalClasses = classNames([`aoc-modal`, `day-${day}`]);
+
+  const handleClick = () => {
+    if (stars > 0) {
+      setShowModal(true);
+    }
+  };
+
+  let starStr = "";
+  for (var i = 0; i < stars; i++) {
+    starStr += "*";
+  }
 
   return (
-    <details className={containerClasses}>
-      <summary className="aoc-container__day">Day {day}</summary>
-      <SPALink className="aoc-container__day-link" href={questionLink} newTab>
-        Question Link
-      </SPALink>
-      <div className="grid-x grid-margin-x aoc-container__solutions">
-        {Part1 && (
-          <section className={solutionClasses}>
-            <Part1 />
-          </section>
-        )}
-        {Part2 && (
-          <section className={solutionClasses}>
-            <Part2 />
-          </section>
-        )}
+    <div className={containerClasses}>
+      <div className="date" onClick={handleClick}>
+        <p className="day">{day}</p>
+        <p className="stars">{starStr}</p>
       </div>
-    </details>
+      <Modal
+        className={modalClasses}
+        showModal={showModal}
+        setShowModal={setShowModal}
+      >
+        {markdown && <ReactMarkdown>{markdown}</ReactMarkdown>}
+        <SPALink className="aoc-container__day-link" href={questionLink} newTab>
+          Question Link
+        </SPALink>
+        <div className="grid-y aoc-container__solutions">
+          {parts.map((Part, index) => (
+            <Part key={`${day}-${index}`} />
+          ))}
+        </div>
+      </Modal>
+    </div>
   );
 };
+
+AoCContainer.propTypes = propTypes;
+AoCContainer.defaultProps = defaultProps;
 
 export default AoCContainer;

@@ -10,10 +10,6 @@ export const Day1Part1 = () => {
   });
   return (
     <>
-      <p>
-        From a list of Integers, find <strong>2</strong> numbers which sum to
-        2020, then multiply them
-      </p>
       <button onClick={() => setSolution(part1(data?.expenses))}>
         Get Part 1 Answer
       </button>
@@ -37,10 +33,6 @@ export const Day1Part2 = () => {
 
   return (
     <>
-      <p>
-        From a list of Integers, find <strong>3</strong> numbers which sum to
-        2020, then multiply them
-      </p>
       <button onClick={() => setSolution(part2(data?.expenses))}>
         Get Part 2 Answer
       </button>

@@ -1,9 +1,10 @@
 header {
   $logo_height: 60px;
-  padding: 1rem;
   background-color: $primary-background;
 
   .header-nav {
+    padding: 0.4rem;
+
     &__logo img {
       height: $logo_height;
     }
@@ -29,6 +30,8 @@ header {
         &__toggle {
           position: absolute;
           right: 0;
+          margin: 0;
+          padding: 0;
         }
 
         &__popout {
@@ -38,10 +41,11 @@ header {
             flex-direction: column;
             position: absolute;
             background-color: $primary-background;
-            width: 100%;
-            top: $logo_height;
-            left: 0;
+            min-width: 50%;
+            top: calc(#{$logo_height} + 13px);
+            right: 0;
             padding: 1rem;
+            text-align: right;
           }
         }
       }

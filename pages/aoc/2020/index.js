@@ -108,7 +108,7 @@ const AoC2020 = () => {
   return (
     <>
       <Head>
-        <title>{`${SEO_CONSTANTS.title_prefix} Adevent of Code | 2020`}</title>
+        <title>{`${SEO_CONSTANTS.title_prefix} Advent of Code | 2020`}</title>
         <description>Advent of Code 2020 answers and commentary</description>
       </Head>
       <Layout>

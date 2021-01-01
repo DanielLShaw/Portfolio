@@ -8,7 +8,7 @@ export default function AoC() {
   return (
     <>
       <Head>
-        <title>{`${SEO_CONSTANTS.title_prefix} Adevent of Code`}</title>
+        <title>{`${SEO_CONSTANTS.title_prefix} Advent of Code`}</title>
       </Head>
       <Layout>
         <h1>Advent of Code</h1>

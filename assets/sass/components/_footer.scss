@@ -1,0 +1,13 @@
+footer {
+  padding: 0.5rem;
+  background-color: $primary-background;
+  text-align: center;
+  border-bottom: $primary-color 3px solid;
+
+  .footer {
+    &__link {
+      padding: 0.25rem;
+      vertical-align: middle;
+    }
+  }
+}

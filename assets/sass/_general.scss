@@ -1,0 +1,19 @@
+$primary-color: #002f41;
+$secondary-color: #00628f;
+
+$primary-background: rgb(131, 132, 175);
+
+a {
+  color: $primary-color;
+  font-weight: bold;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+button {
+  background-color: $primary-background;
+  padding: 0.5em;
+  color: black;
+  margin: 0.5rem;
+}

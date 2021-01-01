@@ -1,5 +1,5 @@
+import React from 'react'
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Layout from "../components/Layout";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -12,9 +12,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-          <Layout>
-            <Main />
-          </Layout>
+          <Main />
           <NextScript />
         </body>
       </Html>

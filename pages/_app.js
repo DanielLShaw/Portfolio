@@ -1,7 +1,16 @@
-import main from "../assets/sass/main.scss";
+import React from "react";
+import { Provider } from "react-redux";
+import { makeStore } from "../store";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import "../assets/sass/main.scss";
 
-export default MyApp;
+const App = ({ Component, pageProps }) => {
+  const store = makeStore();
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
+
+export default App;

@@ -1,0 +1,54 @@
+header {
+  $logo_height: 60px;
+  background-color: $primary-background;
+
+  .header-nav {
+    padding: 0.4rem;
+
+    &__logo img {
+      height: $logo_height;
+    }
+    &.desktop {
+      align-items: center;
+
+      .header-nav {
+        &__page-links {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        &__link {
+          padding: 1rem;
+        }
+      }
+    }
+
+    &.mobile {
+      display: flex;
+      position: relative;
+      .header-nav {
+        &__toggle {
+          position: absolute;
+          right: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+        &__popout {
+          display: none;
+          &.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: $primary-background;
+            min-width: 50%;
+            top: calc(#{$logo_height} + 13px);
+            right: 0;
+            padding: 1rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

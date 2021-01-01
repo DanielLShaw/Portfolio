@@ -1,10 +1,9 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import Head from "next/head";
 
 import AoCContainer from "../../../components/AdventOfCode/AoCContainer";
 import Layout from "../../../components/Layout";
-
-import summary2020 from "../../../components/AdventOfCode/2020/summary2020.md";
+import { SEO_CONSTANTS } from "../../../lib/constants";
 
 import {
   Day1Part1,
@@ -107,21 +106,27 @@ const AoC2020 = () => {
   ];
 
   return (
-    <Layout>
-      <h1>Advent of Code - 2020</h1>
-      <div className="grid-x">
-        {days.map(({ day, parts, markdown, stars }) => (
-          <AoCContainer
-            className="cell small-4 medium-3 large-2"
-            key={day}
-            parts={parts}
-            day={day}
-            markdown={markdown}
-            stars={stars}
-          />
-        ))}
-      </div>
-    </Layout>
+    <>
+      <Head>
+        <title>{`${SEO_CONSTANTS.title_prefix} Adevent of Code | 2020`}</title>
+        <description>Advent of Code 2020 answers and commentary</description>
+      </Head>
+      <Layout>
+        <h1>Advent of Code - 2020</h1>
+        <div className="grid-x">
+          {days.map(({ day, parts, markdown, stars }) => (
+            <AoCContainer
+              className="cell small-4 medium-3 large-2"
+              key={day}
+              parts={parts}
+              day={day}
+              markdown={markdown}
+              stars={stars}
+            />
+          ))}
+        </div>
+      </Layout>
+    </>
   );
 };
 
